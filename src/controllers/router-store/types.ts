@@ -61,6 +61,10 @@ type PrivateRouterActions = {
   requestRouteResources: () => RouterAction;
   listen: () => RouterAction;
   getContext: () => RouterAction;
+  pushQueryParam: (params: {
+    [key: string]: string | null | undefined;
+  }) => RouterAction;
+  pushPathParam: (params: { [key: string]: string }) => RouterAction;
 };
 
 type PublicRouterActions = {
